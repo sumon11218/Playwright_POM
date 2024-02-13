@@ -1,23 +1,21 @@
 {
-  
   "name": "playwright_jan2023",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "showReport": "npx playwright show-report",
-    "transformersTest": "npx playwright test /tests/Transformers.spec.ts --headed --workers=1 --project=chromium --reporter=html",
-    "appleMusicTest": "npx playwright test /tests/AppleMusic.spec.ts --headed --workers=1 --project=edge --reporter=html",
-    "xboxTest": "npx playwright test /tests/MS_Xbox_Test.spec.ts --headed --workers=1 --project=edge --reporter=html",
+    "googleSearchPomTest": "npx playwright test /e2e/tests/GoogleSearch_POM_Test.spec.ts --headed --workers=1 --project=chromium --reporter=html",
+    "googleLoopTest": "npx playwright test /e2e/tests/GoogleSearch_Loop_Array.spec.ts --headed --workers=1 --project=chromium --project=safari --project=firefox --reporter=html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sumon11218/PlaywrightAutomation.git"
-  },  "keywords": [],
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.31.2"
+    "@playwright/test": "^1.35.1"
   }
 }

@@ -1,16 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-
 //setup my test function which is similar to using @Test annotation in testNG
 test('Capture Google Search Result', async ({ page }) => {
-
-
     //declare the arraylist
-    let cars = ["Honda","Nissan"]
+    let cars = Array<string>()
+    cars.push("Honda")
     cars.push("BMW")
     cars.push("Lexus")
-
-  
 
     for(let i = 0; i < cars.length; i++){
         //navigate to google home
@@ -26,11 +22,14 @@ test('Capture Google Search Result', async ({ page }) => {
         await page.locator("xpath=//*[@name='btnK']").nth(0).click({timeout: 10000})
 
         //capture the text and print out the number
-        let result = await page.locator("xpath=//*[@id='result-stat']").textContent({timeout: 3000})
+        let result = await page.locator("xpath=//*[@id='result-stats']").textContent({timeout: 3000})
         //to print we use console.log
         console.log("Result: " + result)
         //split the number
-        let arrayResult = result.split(' ');
+        let arrayResult = result.split(' ')
         console.log("Search Number for " + cars[i] + " is " + arrayResult[1])
     }//end of loop
 })//end of test
+
+
+
