@@ -11,6 +11,7 @@ test.beforeAll(async ({browser}) => {
 
 test('Search for BMW  on Google home & capture the search number', async () => {
     //navigate to google home
+    console.log("Navigating to Google Home Page")
     await page.goto('https://www.google.com')
 
     // search for a keyword
