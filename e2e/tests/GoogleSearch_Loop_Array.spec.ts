@@ -10,6 +10,7 @@ test('Capture Google Search Result', async ({ page }) => {
 
     for(let i = 0; i < cars.length; i++){
         //navigate to google home
+        console.log("Navigating to Google Home Page")
         await page.goto('https://www.google.com')
 
         //to wait few seconds
