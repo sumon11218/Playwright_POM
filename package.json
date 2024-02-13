@@ -6,6 +6,7 @@
   "scripts": {
     "showReport": "npx playwright show-report",
     "googleSearchPomTest": "npx playwright test /e2e/tests/GoogleSearch_POM_Test.spec.ts --headed --workers=1 --project=chromium --reporter=html",
+    "googleSearchPomTestHeadless": "npx playwright test /e2e/tests/GoogleSearch_POM_Test.spec.ts --workers=1 --project=chromium --reporter=html",
     "googleLoopTest": "npx playwright test /e2e/tests/GoogleSearch_Loop_Array.spec.ts --headed --workers=1 --project=chromium --project=safari --project=firefox --reporter=html"
   },
   "repository": {
